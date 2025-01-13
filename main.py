@@ -9,11 +9,11 @@ def send_weather_notification():
 
     load_dotenv()
 
-OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
-TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
-TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
-FROM_PHONE = os.getenv("FROM_PHONE")
-TO_PHONE = os.getenv("TO_PHONE")
+    OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
+    TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
+    TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
+    FROM_PHONE = os.getenv("FROM_PHONE")
+    TO_PHONE = os.getenv("TO_PHONE")
 
     
     # Get weather forecast

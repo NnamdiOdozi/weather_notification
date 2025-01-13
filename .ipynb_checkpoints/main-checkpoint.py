@@ -1,26 +1,21 @@
-import requests
-from twilio.rest import Client
 
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
-
-OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
-TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
-TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
-FROM_PHONE = os.getenv("FROM_PHONE")
-TO_PHONE = os.getenv("TO_PHONE")
-
-
-'''# Weather and SMS API configuration
-OPENWEATHER_API_KEY = "your_openweather_api_key"
-TWILIO_ACCOUNT_SID = "your_twilio_account_sid"
-TWILIO_AUTH_TOKEN = "your_twilio_auth_token"
-FROM_PHONE = "your_twilio_phone_number"
-TO_PHONE = "your_phone_number"'''
 
 def send_weather_notification():
+    
+    import requests
+    from twilio.rest import Client
+    from dotenv import load_dotenv
+    import os
+
+    load_dotenv()
+
+    OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
+    TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
+    TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
+    FROM_PHONE = os.getenv("FROM_PHONE")
+    TO_PHONE = os.getenv("TO_PHONE")
+
+    
     # Get weather forecast
     location = "London,UK"  # Replace with your location
     url = f"http://api.openweathermap.org/data/2.5/forecast?q={location}&appid={OPENWEATHER_API_KEY}"
@@ -35,6 +30,22 @@ def send_weather_notification():
     if "rain" in description:
         message = "It will rain tomorrow. Don't forget your umbrella!"
     elif "clear" in description:
+   
+        import requests
+from twilio.rest import Client
+
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
+TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
+TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
+FROM_PHONE = os.getenv("FROM_PHONE")
+TO_PHONE = os.getenv("TO_PHONE")
+
+        
         message = "Sunny tomorrow! Enjoy the sunshine!"
     else:
         message = f"Tomorrow's weather: {description}."
@@ -44,5 +55,5 @@ def send_weather_notification():
     client.messages.create(body=message, from_=FROM_PHONE, to=TO_PHONE)
 
 # For testing locally
-if __name__ == "__main__":
-    send_weather_notification()
+'''if __name__ == "__main__":
+    send_weather_notification()'''
