@@ -6,5 +6,5 @@ steps:
   - weather-notification
   - --runtime=python310
   - --trigger-http
-  - --entry-point=send_weather_notification
+  - --entry-point=cloud_function_entry_point
   - --allow-unauthenticated

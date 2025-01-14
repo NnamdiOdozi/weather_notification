@@ -1,0 +1,26 @@
+name: Deploy to Google Cloud
+
+on:
+  push:
+    branches:
+      - main # Trigger workflow on pushes to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Google Cloud SDK
+      uses: google-github-actions/setup-gcloud@v1
+      with:
+        version: 'latest'
+        service_account_key: ${{ secrets.GCP_SA_KEY }} # Add your GCP service account key to GitHub secrets
+        project_id: your-google-cloud-project-id # Replace with your Google Cloud project ID
+
+    - name: Trigger Cloud Build
+      run: |
+        gcloud builds submit . \
+          --config=cloudbuild.yaml
