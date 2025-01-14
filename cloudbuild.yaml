@@ -8,3 +8,4 @@ steps:
   - --trigger-http
   - --entry-point=cloud_function_entry_point
   - --allow-unauthenticated
+  - --project=$PROJECT_ID
