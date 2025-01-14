@@ -15,6 +15,7 @@ def send_weather_notification():
     FROM_PHONE = os.getenv("FROM_PHONE")
     TO_PHONE = os.getenv("TO_PHONE")
 
+    nnamdi = 10 #test1 to triggee a github workflow
     
     # Get weather forecast
     location = "London,UK"  # Replace with your location
@@ -39,8 +40,8 @@ def send_weather_notification():
     client.messages.create(body=message, from_=FROM_PHONE, to=TO_PHONE)
 
 # For testing locally
-if __name__ == "__main__":
-    send_weather_notification()
+'''if __name__ == "__main__":
+    send_weather_notification()'''
 
 def cloud_function_entry_point(request):
     # Call your existing function
