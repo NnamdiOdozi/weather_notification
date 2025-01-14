@@ -39,8 +39,8 @@ def send_weather_notification():
     client.messages.create(body=message, from_=FROM_PHONE, to=TO_PHONE)
 
 # For testing locally
-'''if __name__ == "__main__":
-    send_weather_notification()'''
+if __name__ == "__main__":
+    send_weather_notification()
 
 def cloud_function_entry_point(request):
     # Call your existing function
