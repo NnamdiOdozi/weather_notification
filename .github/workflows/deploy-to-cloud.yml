@@ -18,7 +18,7 @@ jobs:
       with:
         version: 'latest'
         service_account_key: ${{ secrets.GCP_SA_KEY }} # Add your GCP service account key to GitHub secrets
-        project_id: your-google-cloud-project-id # Replace with your Google Cloud project ID
+        project_id: weather-notification-447713 # Replace with your Google Cloud project ID
 
     - name: Trigger Cloud Build
       run: |
