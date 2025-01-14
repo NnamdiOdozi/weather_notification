@@ -41,3 +41,8 @@ def send_weather_notification():
 # For testing locally
 '''if __name__ == "__main__":
     send_weather_notification()'''
+
+def cloud_function_entry_point(request):
+    # Call your existing function
+    send_weather_notification()
+    return "Weather notification sent", 200

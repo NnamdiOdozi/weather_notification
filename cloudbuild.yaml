@@ -1,0 +1,10 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - functions
+  - deploy
+  - weather-notification
+  - --runtime=python310
+  - --trigger-http
+  - --entry-point=send_weather_notification
+  - --allow-unauthenticated
