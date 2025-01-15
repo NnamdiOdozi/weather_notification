@@ -14,7 +14,7 @@ docker context use dind
 # Install jupyter lab and some useful libraries
 pip install jupyterlab numpy pandas matplotlib seaborn
 # Add auth using a service account - assumes user adds key to secrets
-#echo "${GOOGLE_APPLICATION_CREDENTIALS}" > /tmp/key.json  # Commenting out GCloud stuff until i sort out authentication
-#export GOOGLE_APPLICATION_CREDENTIALS=/tmp/key.json        # Commenting out GCloud stuff until i sort out authentication
+echo "${GOOGLE_APPLICATION_CREDENTIALS}" > /tmp/key.json
+export GOOGLE_APPLICATION_CREDENTIALS=/tmp/key.json
 # Clean up key
 chmod 400 /tmp/key.json
