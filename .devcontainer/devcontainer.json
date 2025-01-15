@@ -13,7 +13,7 @@
 		"ms-toolsai.jupyter"
 	],
   "postCreateCommand": "bash .devcontainer/setup.sh",
-  "postStartCommand": "gcloud init --quiet && gcloud config set project <YOUR_PROJECT_ID>",
+  "postStartCommand": "gcloud init --quiet && gcloud config set project '<YOUR_PROJECT_ID>'",
     "customizations": {
     "vscode": {
       "settings": {
