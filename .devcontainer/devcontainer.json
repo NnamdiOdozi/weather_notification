@@ -1,0 +1,30 @@
+// .devcontainer/devcontainer.json
+{
+	"name": "Custom Codespace",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+  "features": {
+    "docker-in-docker": {
+      "version": "latest"
+    }
+  },
+	"extensions": [
+		"ms-toolsai.jupyter"
+	],
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postStartCommand": "gcloud init --quiet && gcloud config set project <YOUR_PROJECT_ID>",
+    "customizations": {
+    "vscode": {
+      "settings": {
+           "terminal.integrated.profiles.linux": {
+            "bash": {
+                "path": "/bin/bash"
+            }
+          },
+           "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+    }
+
+}
