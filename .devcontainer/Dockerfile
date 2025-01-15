@@ -17,6 +17,6 @@ RUN apt-get update && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Add current user to docker group to run docker cli commands
-RUN groupadd -g 999 docker && usermod -aG docker vscode
+RUN groupadd -g 999 docker || true && usermod -aG docker vscode
 
 USER vscode
