@@ -19,7 +19,8 @@ def send_weather_notification():
     nnamdi = 20 #test2 to triggee a github workflow
     nnamdi = 30 #test3 to triggee a github workflow
     nnamdi = 30 #test4 to triggee a github workflow
-
+    nnamdi = 40 #test5 to triggee a github workflow
+    
     # Get weather forecast
     location = "London,UK"  # Replace with your location
     url = f"http://api.openweathermap.org/data/2.5/forecast?q={location}&appid={OPENWEATHER_API_KEY}"
