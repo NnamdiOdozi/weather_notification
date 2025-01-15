@@ -1,1 +1,3 @@
-# The purpose of the 3 files in this folder here - Dockerfile, devcontainer and setup is to provision the codespaces for this repo automatically with dockers, gcloud access and a few python libaries. The gcloud SDK was successfully downloaded but auth to gcloud wa not achieved
+# The purpose of the 3 files in this folder here - Dockerfile, devcontainer and setup is to provision the codespaces for this repo 
+# automatically with dockers, gcloud access and a few python libaries. 
+# The gcloud SDK was successfully downloaded but auth to gcloud was not achieved
