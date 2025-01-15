@@ -18,6 +18,7 @@ def send_weather_notification():
     nnamdi = 10 #test1 to triggee a github workflow
     nnamdi = 20 #test2 to triggee a github workflow
     nnamdi = 30 #test3 to triggee a github workflow
+    nnamdi = 30 #test4 to triggee a github workflow
 
     # Get weather forecast
     location = "London,UK"  # Replace with your location
