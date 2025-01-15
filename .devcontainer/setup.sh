@@ -12,7 +12,7 @@ docker context create dind --docker "host=tcp://localhost:2375"
 docker context use dind
 
 # Install jupyter lab and some useful libraries
-pip install jupyterlab numpy pandas matplotlib seaborn
+pip install jupyterlab numpy
 # Add auth using a service account - assumes user adds key to secrets
 echo "${GCP_SA_KEY}" > /tmp/key.json
 export GCP_SA_KEY=/tmp/key.json
